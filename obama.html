@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Prueba D3.js y Obama</title>
+</head>
+<body>
+	<div class="d3"></div>
+</body>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+	$.ajax({
+		url:"http://www.whitehouse.gov/facts/json/",
+		type:"GET",
+		datatype: "json",
+		data:{Type:"progress", Category:"education"},
+		success: function(datos){
+			alert(datos.Category);
+		},
+		error: function(datos){
+
+		}
+	});
+</script>
+</html>
